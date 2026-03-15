@@ -576,5 +576,4 @@ def get_pricespy_prices(query: str) -> list[float]:
                 prices.append(p)
 
     prices = sorted(set(prices))[:20]
-    La voici :
 log.info("[PriceSpy] '%s' -> %d prix.", query, len(prices))
