@@ -400,7 +400,7 @@ def get_dealabs_prices(query: str) -> list[float]:
             except (ValueError, TypeError):
                 pass
 
-    log.info("[Dealabs] '%s' → %d prix de référence.", query, len(prices))
+    log.info("[Dealabs] '%s' -> %d prix de référence.", query, len(prices))
     return prices
 
 
@@ -453,7 +453,7 @@ def get_idealo_prices(query: str) -> list[float]:
 
     # Deduplicate and cap
     prices = sorted(set(prices))[:20]
-    log.info("[Idealo] '%s' → %d prix.", query, len(prices))
+    log.info("[Idealo] '%s' -> %d prix.", query, len(prices))
     return prices
 
 
@@ -505,7 +505,7 @@ def get_leguide_prices(query: str) -> list[float]:
             prices.append(p)
 
     prices = sorted(set(prices))[:20]
-    log.info("[LeGuide] '%s' → %d prix.", query, len(prices))
+    log.info("[LeGuide] '%s' -> %d prix.", query, len(prices))
     return prices
 
 
@@ -576,4 +576,4 @@ def get_pricespy_prices(query: str) -> list[float]:
                 prices.append(p)
 
     prices = sorted(set(prices))[:20]
-    log.info("[PriceSpy] '%s' → %d
+    log.info("[PriceSpy] '%s' -
